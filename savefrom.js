@@ -1,4 +1,4 @@
-const axios = require('axios')
+const axios = require("axios")
 const vm = require('node:vm')
 
 async function savefrom() {
@@ -38,4 +38,4 @@ async function savefrom() {
     return JSON.parse(context.scriptResult.split("window.parent.sf.videoResult.show(")?.[1].split(");")?.[0])
 }
 
-global.tiktok = savefrom
+module.exports.savefrom = savefrom
